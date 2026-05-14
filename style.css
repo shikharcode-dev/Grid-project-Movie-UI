@@ -1,0 +1,453 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #050505;
+    color: white;
+}
+
+.main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    
+
+    background: rgba(5, 5, 5, 0.4); 
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo {
+    font-size: 20px;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+}
+
+.header-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.header-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.header-nav a:hover {
+    color: #00e5ff;
+}
+
+.nav-contact {
+    background: white;
+    color: black !important;
+    padding: 8px 16px;
+    border-radius: 20px;
+}
+
+.nav-contact:hover {
+    background: #00e5ff;
+}
+
+
+.page-section {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #050505;
+    background-attachment: fixed; 
+    background-size: cover;
+    background-position: center;
+}
+
+
+.bg-page1 { background-image: url('https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); } 
+.bg-page2 { background-image: url('https://images.unsplash.com/photo-1520034475321-cbe63696469a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); } 
+.bg-page3 { background-image: url('https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); } 
+.bg-page4 { background-image: url('https://images.unsplash.com/photo-1520034475321-cbe63696469a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); } 
+.bg-page5 { background-image: url('https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); } 
+.bg-page6 { background-image: url('https://images.unsplash.com/photo-1520034475321-cbe63696469a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); } 
+.bg-page7 { background-image: url('https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); } 
+
+
+.background-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 140px;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.04); 
+    text-align: center;
+    line-height: 0.9;
+    letter-spacing: 10px;
+    z-index: 1;
+    pointer-events: none; 
+}
+
+
+.grid-page1 {
+    height: 100%; width: 100%; display: grid; gap: 15px; padding: 15px; padding-top: 100px; position: relative; z-index: 10;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1.5fr 1fr 1.5fr;
+    grid-template-areas: 
+        "interstellar interstellar inception tenet"
+        "interstellar interstellar potter spider"
+        "deadpool wick dune intro";
+}
+
+.grid-page2 {
+    height: 100%; width: 100%; display: grid; gap: 15px; padding: 15px; position: relative; z-index: 10;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1.2fr 1.2fr 1fr;
+    grid-template-areas: 
+        "batman22 avatar avatar blade"
+        "batman22 avatar avatar oppenheimer"
+        "madmax madmax gladiator intro";
+}
+
+.grid-page3, .grid-page4 {
+    height: 100%; width: 100%; display: grid; gap: 15px; padding: 15px; position: relative; z-index: 10;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1.5fr 1fr 1.5fr;
+    grid-template-areas: 
+        "item1 item1 item2"
+        "item3 intro item2"
+        "item4 item5 item5";
+}
+
+.grid-page5, .grid-page6 {
+    height: 100%; width: 100%; display: grid; gap: 15px; padding: 15px; position: relative; z-index: 10;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "stree stree laapataa laapataa"
+        "stree stree loveaaj loveaaj"
+        "sunday sunday ginny intro";
+}
+
+.grid-page7 {
+    height: 100%; width: 100%; display: grid; gap: 15px; padding: 15px; position: relative; z-index: 10;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "profile academic academic"
+        "profile project intro";
+}
+
+
+.image-switch{ width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
+
+.img-first, .img-second{
+    width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;
+    transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.6s ease;
+}
+
+.img-second{ opacity: 0; transform: scale(1.1); filter: blur(4px); }
+.img-first{ opacity: 1; transform: scale(1); filter: blur(0px); }
+
+.hp-img{ object-position: center 15%; }
+
+.dark-gradient{
+    width: 100%; height: 100%; position: absolute; top: 0; left: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.3) 50%, transparent 100%);
+    pointer-events: none; 
+}
+
+.imdb-badge{
+    position: absolute; top: 15px; right: 15px; background-color: #f5c518; color: black;
+    font-weight: bold; font-size: 12px; padding: 5px 10px; border-radius: 8px; z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.movie-info{
+    position: absolute; bottom: 20px; left: 20px; right: 20px; z-index: 2; pointer-events: none; 
+    transform: translateY(10px); transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.movie-info h2{ font-size: 22px; margin-bottom: 5px; }
+
+.desc{
+    font-size: 11px; color: #e2e8f0; line-height: 1.4; height: 0px; opacity: 0; overflow: hidden;
+    transition: height 0.6s ease, margin-top 0.6s ease, opacity 0.6s ease;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
+}
+
+/* --- THE 6 THEME COLORS --- */
+.info-cyan h2 { color: #00e5ff; text-shadow: 0px 0px 8px rgba(0, 229, 255, 0.4); }
+.info-purple h2 { color: #e024ff; text-shadow: 0px 0px 8px rgba(224, 36, 255, 0.4); }
+.info-orange h2 { color: #ff6600; text-shadow: 0px 0px 8px rgba(255, 102, 0, 0.4); }
+.info-yellow h2 { color: #facc15; text-shadow: 0px 0px 8px rgba(250, 204, 21, 0.4); }
+.info-rose h2 { color: #ff0055; text-shadow: 0px 0px 8px rgba(255, 0, 85, 0.4); }
+.info-emerald h2 { color: #00ff88; text-shadow: 0px 0px 8px rgba(0, 255, 136, 0.4); }
+.info-gold h2 { color: #facc15; text-shadow: 0px 0px 8px rgba(250, 204, 21, 0.4); }
+
+
+/* --- ALL CARD BASE STYLES --- */
+.interstellar-card, .inception-card, .tenet-card, .potter-card, .spider-card, .deadpool-card, .wick-card, .dune-card,
+.batman22-card, .avatar-card, .blade-card, .oppenheimer-card, .madmax-card, .gladiator-card,
+.onepiece-card, .naruto-card, .jjk-card, .demon-card, .aot-card,
+.deathnote-card, .bleach-card, .mha-card, .dbz-card, .hxh-card,
+.stree-card, .laapataa-card, .loveaaj-card, .sunday-card, .ginny-card,
+.idiots-card, .pk-card, .dangal-card, .znmd-card, .yjhd-card,
+.profile-card, .academic-card, .project-card {
+    background-color: #111; border-radius: 20px; position: relative; overflow: hidden; cursor: pointer;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.05); 
+}
+
+
+
+.interstellar-card { grid-area: interstellar; } .interstellar-card h2 { font-size: 32px; }
+.inception-card { grid-area: inception; } .tenet-card { grid-area: tenet; }
+.potter-card { grid-area: potter; } .spider-card { grid-area: spider; }
+.deadpool-card { grid-area: deadpool; } .wick-card { grid-area: wick; } .dune-card { grid-area: dune; }
+
+
+
+.batman22-card { grid-area: batman22; } .batman22-card h2 { font-size: 28px; }
+.avatar-card { grid-area: avatar; } .avatar-card h2 { font-size: 34px; }
+.blade-card { grid-area: blade; } .oppenheimer-card { grid-area: oppenheimer; }
+.madmax-card { grid-area: madmax; } .gladiator-card { grid-area: gladiator; }
+
+
+
+.onepiece-card { grid-area: item1; } .onepiece-card h2 { font-size: 32px; }
+.naruto-card { grid-area: item2; }
+.jjk-card { grid-area: item3; }
+.demon-card { grid-area: item4; }
+.aot-card { grid-area: item5; }
+
+
+
+.deathnote-card { grid-area: item1; } .deathnote-card h2 { font-size: 32px; }
+.bleach-card { grid-area: item2; }
+.mha-card { grid-area: item3; }
+.dbz-card { grid-area: item4; }
+.hxh-card { grid-area: item5; }
+
+
+
+.stree-card { grid-area: stree; } .stree-card h2 { font-size: 32px; }
+.laapataa-card { grid-area: laapataa; } .loveaaj-card { grid-area: loveaaj; }
+.sunday-card { grid-area: sunday; } .ginny-card { grid-area: ginny; }
+
+.idiots-card { grid-area: stree; } .idiots-card h2 { font-size: 32px; }
+.pk-card { grid-area: laapataa; } .dangal-card { grid-area: loveaaj; }
+.znmd-card { grid-area: sunday; } .yjhd-card { grid-area: ginny; }
+
+
+
+.profile-card { grid-area: profile; } .profile-card h2 { font-size: 32px; }
+.academic-card { grid-area: academic; }
+.project-card { grid-area: project; }
+
+
+
+.interstellar-card:hover .img-first, .inception-card:hover .img-first, .tenet-card:hover .img-first, .potter-card:hover .img-first, .spider-card:hover .img-first, .deadpool-card:hover .img-first, .wick-card:hover .img-first, .dune-card:hover .img-first,
+.batman22-card:hover .img-first, .avatar-card:hover .img-first, .blade-card:hover .img-first, .oppenheimer-card:hover .img-first, .madmax-card:hover .img-first, .gladiator-card:hover .img-first,
+.onepiece-card:hover .img-first, .naruto-card:hover .img-first, .jjk-card:hover .img-first, .demon-card:hover .img-first, .aot-card:hover .img-first,
+.deathnote-card:hover .img-first, .bleach-card:hover .img-first, .mha-card:hover .img-first, .dbz-card:hover .img-first, .hxh-card:hover .img-first,
+.stree-card:hover .img-first, .laapataa-card:hover .img-first, .loveaaj-card:hover .img-first, .sunday-card:hover .img-first, .ginny-card:hover .img-first,
+.idiots-card:hover .img-first, .pk-card:hover .img-first, .dangal-card:hover .img-first, .znmd-card:hover .img-first, .yjhd-card:hover .img-first {
+    opacity: 0; transform: scale(1.05); filter: blur(4px);
+}
+
+.interstellar-card:hover .img-second, .inception-card:hover .img-second, .tenet-card:hover .img-second, .potter-card:hover .img-second, .spider-card:hover .img-second, .deadpool-card:hover .img-second, .wick-card:hover .img-second, .dune-card:hover .img-second,
+.batman22-card:hover .img-second, .avatar-card:hover .img-second, .blade-card:hover .img-second, .oppenheimer-card:hover .img-second, .madmax-card:hover .img-second, .gladiator-card:hover .img-second,
+.onepiece-card:hover .img-second, .naruto-card:hover .img-second, .jjk-card:hover .img-second, .demon-card:hover .img-second, .aot-card:hover .img-second,
+.deathnote-card:hover .img-second, .bleach-card:hover .img-second, .mha-card:hover .img-second, .dbz-card:hover .img-second, .hxh-card:hover .img-second,
+.stree-card:hover .img-second, .laapataa-card:hover .img-second, .loveaaj-card:hover .img-second, .sunday-card:hover .img-second, .ginny-card:hover .img-second,
+.idiots-card:hover .img-second, .pk-card:hover .img-second, .dangal-card:hover .img-second, .znmd-card:hover .img-second, .yjhd-card:hover .img-second {
+    opacity: 1; transform: scale(1); filter: blur(0px);
+}
+
+.interstellar-card:hover .movie-info, .inception-card:hover .movie-info, .tenet-card:hover .movie-info, .potter-card:hover .movie-info, .spider-card:hover .movie-info, .deadpool-card:hover .movie-info, .wick-card:hover .movie-info, .dune-card:hover .movie-info,
+.batman22-card:hover .movie-info, .avatar-card:hover .movie-info, .blade-card:hover .movie-info, .oppenheimer-card:hover .movie-info, .madmax-card:hover .movie-info, .gladiator-card:hover .movie-info,
+.onepiece-card:hover .movie-info, .naruto-card:hover .movie-info, .jjk-card:hover .movie-info, .demon-card:hover .movie-info, .aot-card:hover .movie-info,
+.deathnote-card:hover .movie-info, .bleach-card:hover .movie-info, .mha-card:hover .movie-info, .dbz-card:hover .movie-info, .hxh-card:hover .movie-info,
+.stree-card:hover .movie-info, .laapataa-card:hover .movie-info, .loveaaj-card:hover .movie-info, .sunday-card:hover .movie-info, .ginny-card:hover .movie-info,
+.idiots-card:hover .movie-info, .pk-card:hover .movie-info, .dangal-card:hover .movie-info, .znmd-card:hover .movie-info, .yjhd-card:hover .movie-info,
+.profile-card:hover .movie-info, .academic-card:hover .movie-info, .project-card:hover .movie-info {
+    transform: translateY(0px);
+}
+
+.interstellar-card:hover .desc, .inception-card:hover .desc, .tenet-card:hover .desc, .potter-card:hover .desc, .spider-card:hover .desc, .deadpool-card:hover .desc, .wick-card:hover .desc, .dune-card:hover .desc,
+.avatar-card:hover .desc, .blade-card:hover .desc, .oppenheimer-card:hover .desc, .madmax-card:hover .desc, .gladiator-card:hover .desc,
+.onepiece-card:hover .desc, .naruto-card:hover .desc, .jjk-card:hover .desc, .demon-card:hover .desc, .aot-card:hover .desc,
+.deathnote-card:hover .desc, .bleach-card:hover .desc, .mha-card:hover .desc, .dbz-card:hover .desc, .hxh-card:hover .desc,
+.stree-card:hover .desc, .laapataa-card:hover .desc, .loveaaj-card:hover .desc, .sunday-card:hover .desc, .ginny-card:hover .desc,
+.idiots-card:hover .desc, .pk-card:hover .desc, .dangal-card:hover .desc, .znmd-card:hover .desc, .yjhd-card:hover .desc {
+    height: 40px; margin-top: 10px; opacity: 1;
+}
+
+.batman22-card:hover .desc { height: 60px; margin-top: 10px; opacity: 1; }
+
+
+
+
+.intro-card-cyan, .intro-card-purple, .intro-card-orange, .intro-card-yellow, .intro-card-rose, .intro-card-emerald, .intro-card-gold {
+    background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(10px);
+    grid-area: intro; border-radius: 20px; position: relative; overflow: hidden;
+    padding: 25px; display: flex; flex-direction: column; justify-content: center;
+    border: 1px solid rgba(255,255,255,0.1); box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+}
+
+.intro-card-cyan h3 { color: #00e5ff; font-size: 12px; margin-bottom: 10px; letter-spacing: 2px; }
+.intro-card-cyan h1 { font-size: 24px; margin-bottom: 20px; line-height: 1.2; color: white; }
+
+.intro-card-purple h3 { color: #e024ff; font-size: 12px; margin-bottom: 10px; letter-spacing: 2px; }
+.intro-card-purple h1 { font-size: 24px; margin-bottom: 20px; line-height: 1.2; color: white; }
+
+.intro-card-orange h3 { color: #ff6600; font-size: 12px; margin-bottom: 10px; letter-spacing: 2px; }
+.intro-card-orange h1 { font-size: 24px; margin-bottom: 20px; line-height: 1.2; color: white; }
+
+.intro-card-yellow h3 { color: #facc15; font-size: 12px; margin-bottom: 10px; letter-spacing: 2px; }
+.intro-card-yellow h1 { font-size: 24px; margin-bottom: 20px; line-height: 1.2; color: white; }
+
+.intro-card-rose h3 { color: #ff0055; font-size: 12px; margin-bottom: 10px; letter-spacing: 2px; }
+.intro-card-rose h1 { font-size: 24px; margin-bottom: 20px; line-height: 1.2; color: white; }
+
+.intro-card-emerald h3 { color: #00ff88; font-size: 12px; margin-bottom: 10px; letter-spacing: 2px; }
+.intro-card-emerald h1 { font-size: 24px; margin-bottom: 20px; line-height: 1.2; color: white; }
+
+.intro-card-gold h3 { color: #facc15; font-size: 12px; margin-bottom: 10px; letter-spacing: 2px; }
+.intro-card-gold h1 { font-size: 24px; margin-bottom: 10px; line-height: 1.2; color: white; }
+.intro-card-gold p { font-size: 12px; color: #94a3b8; margin-bottom: 20px; }
+
+
+.btn-cyan { background-color: #00e5ff; color: black; border: none; padding: 10px 20px; border-radius: 20px; font-weight: bold; cursor: pointer; transition: background-color 0.3s, transform 0.2s; }
+.btn-cyan:hover { background-color: white; transform: scale(1.05); }
+
+.btn-purple { background-color: #e024ff; color: white; border: none; padding: 10px 20px; border-radius: 20px; font-weight: bold; cursor: pointer; transition: background-color 0.3s, transform 0.2s; }
+.btn-purple:hover { background-color: white; color: black; transform: scale(1.05); }
+
+.btn-orange { background-color: #ff6600; color: white; border: none; padding: 10px 20px; border-radius: 20px; font-weight: bold; cursor: pointer; transition: background-color 0.3s, transform 0.2s; }
+.btn-orange:hover { background-color: white; color: black; transform: scale(1.05); }
+
+.btn-yellow { background-color: #facc15; color: black; border: none; padding: 10px 20px; border-radius: 20px; font-weight: bold; cursor: pointer; transition: background-color 0.3s, transform 0.2s; }
+.btn-yellow:hover { background-color: white; transform: scale(1.05); }
+
+.btn-rose { background-color: #ff0055; color: white; border: none; padding: 10px 20px; border-radius: 20px; font-weight: bold; cursor: pointer; transition: background-color 0.3s, transform 0.2s; }
+.btn-rose:hover { background-color: white; color: black; transform: scale(1.05); }
+
+.btn-emerald { background-color: #00ff88; color: black; border: none; padding: 10px 20px; border-radius: 20px; font-weight: bold; cursor: pointer; transition: background-color 0.3s, transform 0.2s; }
+.btn-emerald:hover { background-color: white; transform: scale(1.05); }
+
+.btn-gold { background-color: #facc15; color: black; border: none; padding: 10px 20px; border-radius: 20px; font-weight: bold; cursor: pointer; transition: background-color 0.3s, transform 0.2s; }
+.btn-gold:hover { background-color: white; transform: scale(1.05); }
+
+
+
+
+.giant-outline-text {
+    font-size: 16vw; 
+    font-weight: 900;
+    text-align: center;
+    color: transparent; 
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.532); 
+    letter-spacing: 5px;
+    margin-top: 60px;
+    user-select: none;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    margin-top: 40px;
+    color: white;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    font-weight: bold;
+    color: white;
+}
+
+.social-icons span {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.social-icons span:hover {
+    color: #00e5ff; 
+}
+
+.linkedin-link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.linkedin-link:hover {
+    color: #00e5ff;
+}
+
+.footer-right {
+    display: flex;
+    gap: 80px;
+}
+
+.footer-column h4 {
+    font-size: 14px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.footer-column p {
+    font-size: 13px;
+    color: #aaa; 
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.footer-column p:hover {
+    color: white;
+}
+
+.back-to-top {
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.back-to-top:hover {
+    background-color: white;
+    color: black;
+}
