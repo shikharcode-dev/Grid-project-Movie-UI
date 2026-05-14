@@ -43,11 +43,9 @@ I used **AI tools (ChatGPT)** for guidance and learning concepts, especially for
 
 ---
 
-## 🎥 Demo Video
+## Demo Video
 
-<video autoplay muted loop playsinline>
-    <source src="./VN20260514_141454.mp4" type="video/mp4">
-</video>
+![Demo](VN20260514_141454.gif)
 
 ---
 
