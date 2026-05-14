@@ -49,6 +49,18 @@ I used **AI tools (ChatGPT)** for guidance and learning concepts, especially for
 
 ---
 
+## 📸 Screenshots
+
+### 🧩 UI Preview
+
+![UI 1](./Screenshot%202026-05-14%20025325.png)
+![UI 2](./Screenshot%202026-05-14%20025500.png)
+![UI 3](./Screenshot%202026-05-14%20025755.png)
+
+---
+
+---
+
 ## 💡 Conclusion
 
 This assignment helped me understand **real-world UI design using CSS Grid** and improved my frontend development skills.
