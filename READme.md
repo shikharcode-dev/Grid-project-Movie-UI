@@ -45,7 +45,7 @@ I used **AI tools (ChatGPT)** for guidance and learning concepts, especially for
 
 ## Demo Video
 
-![Demo](VN20260514_141454.gif)
+![Demo](./Screen%20Recording%202026-05-16%20002728.gif)
 
 ---
 
@@ -56,6 +56,7 @@ I used **AI tools (ChatGPT)** for guidance and learning concepts, especially for
 ![UI 1](./Screenshot%202026-05-14%20025325.png)
 ![UI 2](./Screenshot%202026-05-14%20025500.png)
 ![UI 3](./Screenshot%202026-05-14%20025755.png)
+![UI 4](<Screenshot 2026-05-16 002444.png>)
 
 ---
 
