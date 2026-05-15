@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Cinematic Bento Grid </title>
+    <title>Cinematic Bento Grid</title>
 </head>
 <body>
 
-    <section id="page1" class="page-section bg-page1">
-        
+    <section id="page1" class="page-section bg-page1 pt-first">
         <header class="main-header">
             <div class="logo">
                 <span style="font-weight: 900; letter-spacing: 2px;">SHIKHAR.DEV</span>
             </div>
-            <nav class="header-nav">
+            
+            <i class="ri-menu-line menu-btn" id="menuBtn"></i>
+
+            <nav class="header-nav" id="navMenu">
                 <a href="#page1">Vol.1</a>
                 <a href="#page3">Anime</a>
                 <a href="#page5">Bollywood</a>
@@ -24,7 +27,7 @@
 
         <div class="background-text">CINEMATIC<br>VOL. 1</div>
 
-        <main class="grid-page1">
+        <main class="grid-page1 section-grid">
             <div class="interstellar-card">
                 <div class="image-switch">
                     <video class="img-first" src="./page1/inter1.mp4" autoplay loop muted playsinline></video>
@@ -139,7 +142,107 @@
 
     <section id="page2" class="page-section bg-page2">
         <div class="background-text">CINEMATIC<br>VOL. 2</div>
-        <main class="grid-page2">
+        
+        <div class="marquee-wrapper">
+            <div class="marquee-track">
+                <div class="marquee-group">
+                    <div class="marquee-item">
+                        <div class="new-release-badge">NEW RELEASE</div>
+                        <div class="image-switch">
+                            <img class="img-first" src="https://via.placeholder.com/300x400/111/fff?text=Top+Gun+Maverick" alt="Movie">
+                            <img class="img-second" src="https://via.placeholder.com/300x400/222/00e5ff?text=Action+Shot" alt="Movie">
+                        </div>
+                        <div class="dark-gradient"></div><div class="imdb-badge">⭐ 8.3/10</div>
+                        <div class="m-info info-purple"><h2>Top Gun: Maverick</h2><p class="desc">Pete Mitchell trains a new generation of pilots.</p></div>
+                    </div>
+
+                    <div class="marquee-item">
+                        <div class="image-switch">
+                            <img class="img-first" src="https://via.placeholder.com/300x400/222/fff?text=The+Matrix" alt="Movie">
+                            <img class="img-second" src="https://via.placeholder.com/300x400/111/00ff88?text=Neo" alt="Movie">
+                        </div>
+                        <div class="dark-gradient"></div><div class="imdb-badge">⭐ 8.7/10</div>
+                        <div class="m-info info-purple"><h2>The Matrix</h2><p class="desc">A hacker discovers the reality of his world.</p></div>
+                    </div>
+
+                    <div class="marquee-item">
+                        <div class="image-switch">
+                            <img class="img-first" src="https://via.placeholder.com/300x400/333/fff?text=Avengers+Endgame" alt="Movie">
+                            <img class="img-second" src="https://via.placeholder.com/300x400/111/e024ff?text=Thanos" alt="Movie">
+                        </div>
+                        <div class="dark-gradient"></div><div class="imdb-badge">⭐ 8.4/10</div>
+                        <div class="m-info info-purple"><h2>Avengers: Endgame</h2><p class="desc">The final stand against Thanos.</p></div>
+                    </div>
+
+                    <div class="marquee-item">
+                        <div class="new-release-badge">NEW RELEASE</div>
+                        <div class="image-switch">
+                            <img class="img-first" src="https://via.placeholder.com/300x400/444/fff?text=The+Fall+Guy" alt="Movie">
+                            <img class="img-second" src="https://via.placeholder.com/300x400/111/facc15?text=Stunt" alt="Movie">
+                        </div>
+                        <div class="dark-gradient"></div><div class="imdb-badge">⭐ 7.0/10</div>
+                        <div class="m-info info-purple"><h2>The Fall Guy</h2><p class="desc">A battered stuntman gets wrapped up in a real conspiracy.</p></div>
+                    </div>
+
+                    <div class="marquee-item">
+                        <div class="image-switch">
+                            <img class="img-first" src="https://via.placeholder.com/300x400/555/fff?text=Jurassic+Park" alt="Movie">
+                            <img class="img-second" src="https://via.placeholder.com/300x400/111/ff6600?text=T-Rex" alt="Movie">
+                        </div>
+                        <div class="dark-gradient"></div><div class="imdb-badge">⭐ 8.2/10</div>
+                        <div class="m-info info-purple"><h2>Jurassic Park</h2><p class="desc">A theme park suffers a major power breakdown.</p></div>
+                    </div>
+
+                    <div class="marquee-item">
+                        <div class="image-switch">
+                            <img class="img-first" src="https://via.placeholder.com/300x400/666/fff?text=Star+Wars" alt="Movie">
+                            <img class="img-second" src="https://via.placeholder.com/300x400/111/00e5ff?text=Vader" alt="Movie">
+                        </div>
+                        <div class="dark-gradient"></div><div class="imdb-badge">⭐ 8.6/10</div>
+                        <div class="m-info info-purple"><h2>Star Wars</h2><p class="desc">Luke Skywalker joins forces with a Jedi Knight.</p></div>
+                    </div>
+
+                    <div class="marquee-item">
+                        <div class="image-switch">
+                            <img class="img-first" src="https://via.placeholder.com/300x400/777/fff?text=Lord+Of+Rings" alt="Movie">
+                            <img class="img-second" src="https://via.placeholder.com/300x400/111/ff0055?text=Frodo" alt="Movie">
+                        </div>
+                        <div class="dark-gradient"></div><div class="imdb-badge">⭐ 9.0/10</div>
+                        <div class="m-info info-purple"><h2>Lord of the Rings</h2><p class="desc">A meek Hobbit sets out to destroy a powerful ring.</p></div>
+                    </div>
+
+                    <div class="marquee-item">
+                        <div class="new-release-badge">NEW RELEASE</div>
+                        <div class="image-switch">
+                            <img class="img-first" src="https://via.placeholder.com/300x400/888/fff?text=Godzilla+Minus+One" alt="Movie">
+                            <img class="img-second" src="https://via.placeholder.com/300x400/111/e024ff?text=Roar" alt="Movie">
+                        </div>
+                        <div class="dark-gradient"></div><div class="imdb-badge">⭐ 8.3/10</div>
+                        <div class="m-info info-purple"><h2>Godzilla Minus One</h2><p class="desc">Post-war Japan faces a terrifying new monster.</p></div>
+                    </div>
+
+                    <div class="marquee-item">
+                        <div class="image-switch">
+                            <img class="img-first" src="https://via.placeholder.com/300x400/111/fff?text=Terminator+2" alt="Movie">
+                            <img class="img-second" src="https://via.placeholder.com/300x400/222/00ff88?text=Robot" alt="Movie">
+                        </div>
+                        <div class="dark-gradient"></div><div class="imdb-badge">⭐ 8.5/10</div>
+                        <div class="m-info info-purple"><h2>Terminator 2</h2><p class="desc">A cyborg must protect the future leader of humanity.</p></div>
+                    </div>
+
+                    <div class="marquee-item">
+                        <div class="image-switch">
+                            <img class="img-first" src="https://via.placeholder.com/300x400/222/fff?text=Alien" alt="Movie">
+                            <img class="img-second" src="https://via.placeholder.com/300x400/111/facc15?text=Xenomorph" alt="Movie">
+                        </div>
+                        <div class="dark-gradient"></div><div class="imdb-badge">⭐ 8.5/10</div>
+                        <div class="m-info info-purple"><h2>Alien</h2><p class="desc">A space crew encounters a deadly extra-terrestrial.</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <main class="grid-page2 section-grid">
             <div class="batman22-card">
                 <div class="image-switch">
                     <img class="img-first" src="./page2/thebat1.jpg" alt="Batman 1">
@@ -228,7 +331,7 @@
 
     <section id="page3" class="page-section bg-page3">
         <div class="background-text">ANIMATION<br>VOL. 3</div>
-        <main class="grid-page3">
+        <main class="grid-page3 section-grid">
             <div class="onepiece-card">
                 <div class="image-switch">
                     <video class="img-first" src="./page3/one2.mp4" autoplay loop muted playsinline></video>
@@ -304,8 +407,107 @@
 
     <section id="page4" class="page-section bg-page4">
         <div class="background-text">ANIMATION<br>VOL. 4</div>
-        <main class="grid-page4">
-            
+        
+        <div class="marquee-wrapper">
+            <div class="marquee-track">
+                <div class="marquee-group">
+                    <div class="marquee-item">
+                        <div class="new-release-badge">NEW RELEASE</div>
+                        <div class="image-switch">
+                            <img class="img-first" src="https://via.placeholder.com/300x400/111/fff?text=Solo+Leveling" alt="Movie">
+                            <img class="img-second" src="https://via.placeholder.com/300x400/222/00e5ff?text=Arise" alt="Movie">
+                        </div>
+                        <div class="dark-gradient"></div><div class="imdb-badge">⭐ 8.5/10</div>
+                        <div class="m-info info-yellow"><h2>Solo Leveling</h2><p class="desc">The weakest hunter awakens with an infinite system.</p></div>
+                    </div>
+
+                    <div class="marquee-item">
+                        <div class="new-release-badge">NEW RELEASE</div>
+                        <div class="image-switch">
+                            <img class="img-first" src="https://via.placeholder.com/300x400/222/fff?text=Kaiju+No+8" alt="Movie">
+                            <img class="img-second" src="https://via.placeholder.com/300x400/111/00ff88?text=Monster" alt="Movie">
+                        </div>
+                        <div class="dark-gradient"></div><div class="imdb-badge">⭐ 8.4/10</div>
+                        <div class="m-info info-yellow"><h2>Kaiju No. 8</h2><p class="desc">A sweeper gains the power to transform into a Kaiju.</p></div>
+                    </div>
+
+                    <div class="marquee-item">
+                        <div class="new-release-badge">NEW RELEASE</div>
+                        <div class="image-switch">
+                            <img class="img-first" src="https://via.placeholder.com/300x400/333/fff?text=Frieren" alt="Movie">
+                            <img class="img-second" src="https://via.placeholder.com/300x400/111/e024ff?text=Magic" alt="Movie">
+                        </div>
+                        <div class="dark-gradient"></div><div class="imdb-badge">⭐ 9.1/10</div>
+                        <div class="m-info info-yellow"><h2>Frieren</h2><p class="desc">An elf explores the meaning of life after the hero's death.</p></div>
+                    </div>
+
+                    <div class="marquee-item">
+                        <div class="image-switch">
+                            <img class="img-first" src="https://via.placeholder.com/300x400/444/fff?text=Haikyuu" alt="Movie">
+                            <img class="img-second" src="https://via.placeholder.com/300x400/111/facc15?text=Spike" alt="Movie">
+                        </div>
+                        <div class="dark-gradient"></div><div class="imdb-badge">⭐ 8.7/10</div>
+                        <div class="m-info info-yellow"><h2>Haikyuu!!</h2><p class="desc">A boy determined to become a volleyball champion.</p></div>
+                    </div>
+
+                    <div class="marquee-item">
+                        <div class="image-switch">
+                            <img class="img-first" src="https://via.placeholder.com/300x400/555/fff?text=Spy+Family" alt="Movie">
+                            <img class="img-second" src="https://via.placeholder.com/300x400/111/ff6600?text=Anya" alt="Movie">
+                        </div>
+                        <div class="dark-gradient"></div><div class="imdb-badge">⭐ 8.4/10</div>
+                        <div class="m-info info-yellow"><h2>Spy x Family</h2><p class="desc">A spy builds a fake family to execute a mission.</p></div>
+                    </div>
+
+                    <div class="marquee-item">
+                        <div class="image-switch">
+                            <img class="img-first" src="https://via.placeholder.com/300x400/666/fff?text=Blue+Lock" alt="Movie">
+                            <img class="img-second" src="https://via.placeholder.com/300x400/111/00e5ff?text=Goal" alt="Movie">
+                        </div>
+                        <div class="dark-gradient"></div><div class="imdb-badge">⭐ 8.3/10</div>
+                        <div class="m-info info-yellow"><h2>Blue Lock</h2><p class="desc">Japan searches for the ultimate egoist striker.</p></div>
+                    </div>
+
+                    <div class="marquee-item">
+                        <div class="image-switch">
+                            <img class="img-first" src="https://via.placeholder.com/300x400/777/fff?text=Tokyo+Ghoul" alt="Movie">
+                            <img class="img-second" src="https://via.placeholder.com/300x400/111/ff0055?text=Kagune" alt="Movie">
+                        </div>
+                        <div class="dark-gradient"></div><div class="imdb-badge">⭐ 7.8/10</div>
+                        <div class="m-info info-yellow"><h2>Tokyo Ghoul</h2><p class="desc">A college student becomes a half-ghoul.</p></div>
+                    </div>
+
+                    <div class="marquee-item">
+                        <div class="image-switch">
+                            <img class="img-first" src="https://via.placeholder.com/300x400/888/fff?text=FMA+Brotherhood" alt="Movie">
+                            <img class="img-second" src="https://via.placeholder.com/300x400/111/e024ff?text=Alchemy" alt="Movie">
+                        </div>
+                        <div class="dark-gradient"></div><div class="imdb-badge">⭐ 9.1/10</div>
+                        <div class="m-info info-yellow"><h2>Fullmetal Alchemist</h2><p class="desc">Two brothers search for the Philosopher's Stone.</p></div>
+                    </div>
+
+                    <div class="marquee-item">
+                        <div class="image-switch">
+                            <img class="img-first" src="https://via.placeholder.com/300x400/111/fff?text=One+Punch+Man" alt="Movie">
+                            <img class="img-second" src="https://via.placeholder.com/300x400/222/00ff88?text=Punch" alt="Movie">
+                        </div>
+                        <div class="dark-gradient"></div><div class="imdb-badge">⭐ 8.7/10</div>
+                        <div class="m-info info-yellow"><h2>One Punch Man</h2><p class="desc">A hero who can defeat any opponent with a single punch.</p></div>
+                    </div>
+
+                    <div class="marquee-item">
+                        <div class="image-switch">
+                            <img class="img-first" src="https://via.placeholder.com/300x400/222/fff?text=Mob+Psycho" alt="Movie">
+                            <img class="img-second" src="https://via.placeholder.com/300x400/111/facc15?text=100%" alt="Movie">
+                        </div>
+                        <div class="dark-gradient"></div><div class="imdb-badge">⭐ 8.6/10</div>
+                        <div class="m-info info-yellow"><h2>Mob Psycho 100</h2><p class="desc">A psychic middle school boy tries to live a normal life.</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <main class="grid-page4 section-grid">
             <div class="deathnote-card">
                 <div class="image-switch">
                     <img class="img-first" src="https://i.pinimg.com/1200x/cf/50/4f/cf504f53d5242f2d50ee97ffc99cf0ce.jpg" alt="Death Note 1">
@@ -381,7 +583,106 @@
 
     <section id="page5" class="page-section bg-page5">
         <div class="background-text">BOLLYWOOD<br>VOL. 5</div>
-        <main class="grid-page5">
+
+        <div class="marquee-wrapper">
+            <div class="marquee-track">
+                <div class="marquee-group">
+                    <div class="marquee-item">
+                        <div class="new-release-badge">NEW RELEASE</div>
+                        <div class="image-switch">
+                            <img class="img-first" src="https://via.placeholder.com/300x400/111/fff?text=Kalki+2898" alt="Movie">
+                            <img class="img-second" src="https://via.placeholder.com/300x400/222/00e5ff?text=Avatar" alt="Movie">
+                        </div>
+                        <div class="dark-gradient"></div><div class="imdb-badge">⭐ 8.0/10</div>
+                        <div class="m-info info-rose"><h2>Kalki 2898 AD</h2><p class="desc">A modern-day avatar descends to protect the world.</p></div>
+                    </div>
+
+                    <div class="marquee-item">
+                        <div class="new-release-badge">NEW RELEASE</div>
+                        <div class="image-switch">
+                            <img class="img-first" src="https://via.placeholder.com/300x400/222/fff?text=Fighter" alt="Movie">
+                            <img class="img-second" src="https://via.placeholder.com/300x400/111/00ff88?text=Jet" alt="Movie">
+                        </div>
+                        <div class="dark-gradient"></div><div class="imdb-badge">⭐ 6.9/10</div>
+                        <div class="m-info info-rose"><h2>Fighter</h2><p class="desc">Top IAF aviators face imminent danger in the skies.</p></div>
+                    </div>
+
+                    <div class="marquee-item">
+                        <div class="image-switch">
+                            <img class="img-first" src="https://via.placeholder.com/300x400/333/fff?text=Animal" alt="Movie">
+                            <img class="img-second" src="https://via.placeholder.com/300x400/111/e024ff?text=Rage" alt="Movie">
+                        </div>
+                        <div class="dark-gradient"></div><div class="imdb-badge">⭐ 6.2/10</div>
+                        <div class="m-info info-rose"><h2>Animal</h2><p class="desc">A son's obsessive love leads to a violent transformation.</p></div>
+                    </div>
+
+                    <div class="marquee-item">
+                        <div class="image-switch">
+                            <img class="img-first" src="https://via.placeholder.com/300x400/444/fff?text=Jawan" alt="Movie">
+                            <img class="img-second" src="https://via.placeholder.com/300x400/111/facc15?text=Action" alt="Movie">
+                        </div>
+                        <div class="dark-gradient"></div><div class="imdb-badge">⭐ 7.1/10</div>
+                        <div class="m-info info-rose"><h2>Jawan</h2><p class="desc">A man driven by a personal vendetta rectifies societal wrongs.</p></div>
+                    </div>
+
+                    <div class="marquee-item">
+                        <div class="image-switch">
+                            <img class="img-first" src="https://via.placeholder.com/300x400/555/fff?text=Pathaan" alt="Movie">
+                            <img class="img-second" src="https://via.placeholder.com/300x400/111/ff6600?text=Spy" alt="Movie">
+                        </div>
+                        <div class="dark-gradient"></div><div class="imdb-badge">⭐ 6.5/10</div>
+                        <div class="m-info info-rose"><h2>Pathaan</h2><p class="desc">An exiled agent must take down a rogue terror organization.</p></div>
+                    </div>
+
+                    <div class="marquee-item">
+                        <div class="image-switch">
+                            <img class="img-first" src="https://via.placeholder.com/300x400/666/fff?text=Gadar+2" alt="Movie">
+                            <img class="img-second" src="https://via.placeholder.com/300x400/111/00e5ff?text=Tara" alt="Movie">
+                        </div>
+                        <div class="dark-gradient"></div><div class="imdb-badge">⭐ 5.2/10</div>
+                        <div class="m-info info-rose"><h2>Gadar 2</h2><p class="desc">Tara Singh returns to Pakistan to rescue his son.</p></div>
+                    </div>
+
+                    <div class="marquee-item">
+                        <div class="image-switch">
+                            <img class="img-first" src="https://via.placeholder.com/300x400/777/fff?text=Dunki" alt="Movie">
+                            <img class="img-second" src="https://via.placeholder.com/300x400/111/ff0055?text=Travel" alt="Movie">
+                        </div>
+                        <div class="dark-gradient"></div><div class="imdb-badge">⭐ 6.8/10</div>
+                        <div class="m-info info-rose"><h2>Dunki</h2><p class="desc">Friends use a backdoor route to move to another country.</p></div>
+                    </div>
+
+                    <div class="marquee-item">
+                        <div class="image-switch">
+                            <img class="img-first" src="https://via.placeholder.com/300x400/888/fff?text=Rocky+Aur+Rani" alt="Movie">
+                            <img class="img-second" src="https://via.placeholder.com/300x400/111/e024ff?text=Romance" alt="Movie">
+                        </div>
+                        <div class="dark-gradient"></div><div class="imdb-badge">⭐ 6.5/10</div>
+                        <div class="m-info info-rose"><h2>Rocky Aur Rani</h2><p class="desc">Two clashing families deal with a complicated romance.</p></div>
+                    </div>
+
+                    <div class="marquee-item">
+                        <div class="image-switch">
+                            <img class="img-first" src="https://via.placeholder.com/300x400/111/fff?text=Drishyam+2" alt="Movie">
+                            <img class="img-second" src="https://via.placeholder.com/300x400/222/00ff88?text=Mystery" alt="Movie">
+                        </div>
+                        <div class="dark-gradient"></div><div class="imdb-badge">⭐ 8.2/10</div>
+                        <div class="m-info info-rose"><h2>Drishyam 2</h2><p class="desc">A gripping tale of an investigation and a family's secret.</p></div>
+                    </div>
+
+                    <div class="marquee-item">
+                        <div class="image-switch">
+                            <img class="img-first" src="https://via.placeholder.com/300x400/222/fff?text=RRR" alt="Movie">
+                            <img class="img-second" src="https://via.placeholder.com/300x400/111/facc15?text=Epic" alt="Movie">
+                        </div>
+                        <div class="dark-gradient"></div><div class="imdb-badge">⭐ 7.8/10</div>
+                        <div class="m-info info-rose"><h2>RRR</h2><p class="desc">A fictitious story about two legendary revolutionaries.</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <main class="grid-page5 section-grid">
             <div class="stree-card">
                 <div class="image-switch">
                     <video class="img-first" src="./page4/stree2.mp4" autoplay loop muted playsinline></video>
@@ -457,7 +758,7 @@
 
     <section id="page6" class="page-section bg-page6">
         <div class="background-text">BOLLYWOOD<br>VOL. 6</div>
-        <main class="grid-page6">
+        <main class="grid-page6 section-grid">
             
             <div class="idiots-card">
                 <div class="image-switch">
@@ -576,11 +877,6 @@
         <a href="#page1" class="back-to-top">↑ Top</a>
     </section>
 
-    <script>
-        window.onbeforeunload = function () {
-            window.scrollTo(0, 0);
-        };
-        setTimeout(function(){ window.scrollTo(0, 0); }, 10);
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
