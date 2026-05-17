@@ -1,4 +1,3 @@
-// Header Mobile Menu Logic
 const menuBtn = document.getElementById('menuBtn');
 const navMenu = document.getElementById('navMenu');
 
@@ -18,31 +17,63 @@ document.querySelectorAll('.header-nav a').forEach(link => {
     });
 });
 
-// Reset scroll position on refresh
+
 window.onbeforeunload = function () { window.scrollTo(0, 0); };
 setTimeout(function(){ window.scrollTo(0, 0); }, 10);
 
-// MARQUEE LOGIC: Auto-scroll + Drag/Swipe Support + Hover Fix
+
+const giantText = document.querySelector('.giant-outline-text');
+let currentSpotlightSize = 0;
+let targetSpotlightSize = 0;
+
+function animateSpotlight() {
+    currentSpotlightSize += (targetSpotlightSize - currentSpotlightSize) * 0.08;
+    if (giantText) {
+        giantText.style.setProperty('--spotlight-size', `${currentSpotlightSize}px`);
+    }
+    requestAnimationFrame(animateSpotlight);
+}
+
+if (giantText) {
+    animateSpotlight(); // Start the loop
+
+    giantText.addEventListener('mousemove', (e) => {
+        const rect = giantText.getBoundingClientRect();
+        giantText.style.setProperty('--x', `${e.clientX - rect.left}px`);
+        giantText.style.setProperty('--y', `${e.clientY - rect.top}px`);
+    });
+
+    giantText.addEventListener('mouseenter', (e) => {
+
+        const rect = giantText.getBoundingClientRect();
+        giantText.style.setProperty('--x', `${e.clientX - rect.left}px`);
+        giantText.style.setProperty('--y', `${e.clientY - rect.top}px`);
+        
+        targetSpotlightSize = 160; 
+    });
+
+    giantText.addEventListener('mouseleave', () => {
+        targetSpotlightSize = 0; 
+    });
+}
+
+
 const marquees = document.querySelectorAll('.marquee-wrapper');
 
 marquees.forEach(marquee => {
     const track = marquee.querySelector('.marquee-track');
     
-    // Duplicate the track's inner HTML to create the seamless infinite loop
     track.innerHTML += track.innerHTML;
 
     let isDown = false;
     let startX;
     let scrollLeft;
     let isHovered = false;
-    let speed = 2.2; // Increased speed for faster, smooth scrolling
+    let speed = 2.2; 
 
-    // Auto-Scrolling Function
     function autoScroll() {
         if (!isHovered && !isDown) {
             marquee.scrollLeft += speed; 
-            
-            // If we scroll past halfway, instantly snap back for the infinite loop
             if (marquee.scrollLeft >= track.scrollWidth / 2) {
                 marquee.scrollLeft -= track.scrollWidth / 2;
             }
@@ -51,10 +82,9 @@ marquees.forEach(marquee => {
     }
     requestAnimationFrame(autoScroll);
 
-    // Mouse Events (PC Dragging)
     marquee.addEventListener('mousedown', (e) => {
         isDown = true;
-        marquee.classList.add('is-dragging'); // Disables hover effects while dragging
+        marquee.classList.add('is-dragging');
         marquee.style.cursor = 'grabbing';
         startX = e.pageX - marquee.offsetLeft;
         scrollLeft = marquee.scrollLeft;
@@ -81,28 +111,25 @@ marquees.forEach(marquee => {
         if (!isDown) return;
         e.preventDefault();
         const x = e.pageX - marquee.offsetLeft;
-        const walk = (x - startX) * 2; // Drag sensitivity
+        const walk = (x - startX) * 2;
         
         let newScrollLeft = scrollLeft - walk;
         
-        // Backward loop check
         if (newScrollLeft <= 0) {
             newScrollLeft += track.scrollWidth / 2;
-            scrollLeft += track.scrollWidth / 2; // Adjust anchor
+            scrollLeft += track.scrollWidth / 2; 
         } 
-        // Forward loop check
         else if (newScrollLeft >= track.scrollWidth / 2) {
             newScrollLeft -= track.scrollWidth / 2;
-            scrollLeft -= track.scrollWidth / 2; // Adjust anchor
+            scrollLeft -= track.scrollWidth / 2; 
         }
         
         marquee.scrollLeft = newScrollLeft;
     });
 
-    // Touch Events (Phones & Tablets)
     marquee.addEventListener('touchstart', (e) => {
         isDown = true;
-        isHovered = true; // Pause auto-scroll when touching
+        isHovered = true; 
         marquee.classList.add('is-dragging');
         startX = e.touches[0].pageX - marquee.offsetLeft;
         scrollLeft = marquee.scrollLeft;
@@ -110,7 +137,7 @@ marquees.forEach(marquee => {
     
     marquee.addEventListener('touchend', () => {
         isDown = false;
-        isHovered = false; // Resume auto-scroll
+        isHovered = false; 
         marquee.classList.remove('is-dragging');
     });
     
@@ -121,12 +148,10 @@ marquees.forEach(marquee => {
         
         let newScrollLeft = scrollLeft - walk;
         
-        // Backward loop check
         if (newScrollLeft <= 0) {
             newScrollLeft += track.scrollWidth / 2;
             scrollLeft += track.scrollWidth / 2;
         } 
-        // Forward loop check
         else if (newScrollLeft >= track.scrollWidth / 2) {
             newScrollLeft -= track.scrollWidth / 2;
             scrollLeft -= track.scrollWidth / 2;
