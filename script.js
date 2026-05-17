@@ -2,24 +2,29 @@ const menuBtn = document.getElementById('menuBtn');
 const navMenu = document.getElementById('navMenu');
 
 menuBtn.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    if(navMenu.classList.contains('active')) {
+    navMenu.classList.toggle('hidden');
+    navMenu.classList.toggle('flex');
+    if(navMenu.classList.contains('flex')) {
         menuBtn.classList.replace('ri-menu-line', 'ri-close-line');
     } else {
         menuBtn.classList.replace('ri-close-line', 'ri-menu-line');
     }
 });
 
-document.querySelectorAll('.header-nav a').forEach(link => {
+document.querySelectorAll('.nav-link, .nav-btn').forEach(link => {
     link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        menuBtn.classList.replace('ri-close-line', 'ri-menu-line');
+        if(window.innerWidth < 768) {
+            navMenu.classList.add('hidden');
+            navMenu.classList.remove('flex');
+            menuBtn.classList.replace('ri-close-line', 'ri-menu-line');
+        }
     });
 });
 
-
+// Reset scroll position on refresh
 window.onbeforeunload = function () { window.scrollTo(0, 0); };
 setTimeout(function(){ window.scrollTo(0, 0); }, 10);
+
 
 
 const giantText = document.querySelector('.giant-outline-text');
@@ -27,7 +32,7 @@ let currentSpotlightSize = 0;
 let targetSpotlightSize = 0;
 
 function animateSpotlight() {
-    currentSpotlightSize += (targetSpotlightSize - currentSpotlightSize) * 0.08;
+    currentSpotlightSize += (targetSpotlightSize - currentSpotlightSize) * 0.08; 
     if (giantText) {
         giantText.style.setProperty('--spotlight-size', `${currentSpotlightSize}px`);
     }
@@ -35,7 +40,7 @@ function animateSpotlight() {
 }
 
 if (giantText) {
-    animateSpotlight(); // Start the loop
+    animateSpotlight(); 
 
     giantText.addEventListener('mousemove', (e) => {
         const rect = giantText.getBoundingClientRect();
@@ -44,12 +49,10 @@ if (giantText) {
     });
 
     giantText.addEventListener('mouseenter', (e) => {
-
         const rect = giantText.getBoundingClientRect();
         giantText.style.setProperty('--x', `${e.clientX - rect.left}px`);
         giantText.style.setProperty('--y', `${e.clientY - rect.top}px`);
-        
-        targetSpotlightSize = 160; 
+        targetSpotlightSize = 200; 
     });
 
     giantText.addEventListener('mouseleave', () => {
@@ -58,12 +61,12 @@ if (giantText) {
 }
 
 
+
 const marquees = document.querySelectorAll('.marquee-wrapper');
 
 marquees.forEach(marquee => {
     const track = marquee.querySelector('.marquee-track');
-    
-    track.innerHTML += track.innerHTML;
+    track.innerHTML += track.innerHTML; // Duplicate for seamless loop
 
     let isDown = false;
     let startX;
@@ -82,6 +85,7 @@ marquees.forEach(marquee => {
     }
     requestAnimationFrame(autoScroll);
 
+    // Mouse Drag Events
     marquee.addEventListener('mousedown', (e) => {
         isDown = true;
         marquee.classList.add('is-dragging');
@@ -97,9 +101,7 @@ marquees.forEach(marquee => {
         marquee.style.cursor = 'grab';
     });
     
-    marquee.addEventListener('mouseenter', () => {
-        isHovered = true;
-    });
+    marquee.addEventListener('mouseenter', () => { isHovered = true; });
     
     marquee.addEventListener('mouseup', () => {
         isDown = false;
@@ -114,7 +116,6 @@ marquees.forEach(marquee => {
         const walk = (x - startX) * 2;
         
         let newScrollLeft = scrollLeft - walk;
-        
         if (newScrollLeft <= 0) {
             newScrollLeft += track.scrollWidth / 2;
             scrollLeft += track.scrollWidth / 2; 
@@ -123,10 +124,10 @@ marquees.forEach(marquee => {
             newScrollLeft -= track.scrollWidth / 2;
             scrollLeft -= track.scrollWidth / 2; 
         }
-        
         marquee.scrollLeft = newScrollLeft;
     });
 
+    // Touch Events
     marquee.addEventListener('touchstart', (e) => {
         isDown = true;
         isHovered = true; 
@@ -147,7 +148,6 @@ marquees.forEach(marquee => {
         const walk = (x - startX) * 2;
         
         let newScrollLeft = scrollLeft - walk;
-        
         if (newScrollLeft <= 0) {
             newScrollLeft += track.scrollWidth / 2;
             scrollLeft += track.scrollWidth / 2;
@@ -156,7 +156,6 @@ marquees.forEach(marquee => {
             newScrollLeft -= track.scrollWidth / 2;
             scrollLeft -= track.scrollWidth / 2;
         }
-
         marquee.scrollLeft = newScrollLeft;
     });
 });
